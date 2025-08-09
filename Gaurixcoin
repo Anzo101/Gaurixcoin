@@ -1,0 +1,118 @@
+import React from 'react' import { motion } from 'framer-motion'
+
+export default function GaurixLanding() { const twitterUrl = 'https://x.com/gaurixcoin?t=iE_CZXsrJf4y9_uk37wwig&s=09' const telegramUrl = 'https://t.me/gaurixoffical'
+
+return ( <div className="min-h-screen bg-gradient-to-b from-black via-zinc-900 to-gray-900 text-gray-100 font-sans"> {/* Nav */} <nav className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between"> <div className="flex items-center gap-3"> <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-600 to-indigo-500 flex items-center justify-center shadow-2xl"> <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 2L15.5 8H8.5L12 2Z" fill="white" opacity="0.9" /> <path d="M4 10H20L12 22L4 10Z" fill="white" opacity="0.06" /> </svg> </div> <div> <div className="text-xl font-extrabold tracking-tight">GAURIX</div> <div className="text-xs text-zinc-400 -mt-1">$GRX • Meme coin with teeth</div> </div> </div> <div className="flex items-center gap-3"> <a href={twitterUrl} target="_blank" rel="noreferrer" className="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition">X</a> <a href={telegramUrl} target="_blank" rel="noreferrer" className="px-4 py-2 rounded-lg bg-gradient-to-r from-pink-600 to-violet-600 shadow hover:opacity-90 transition">Telegram</a> </div> </nav>
+
+{/* Hero */}
+  <header className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
+    <motion.div initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
+      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">GAURIX has awakened.</h1>
+      <p className="mt-4 text-zinc-300 max-w-xl">Not another copy. Not another rug. $GRX is a brainrot-core meme coin built openly — no forced promos, no gatekeepers. Community-first. Chaos-second.</p>
+
+      <div className="mt-6 flex flex-wrap gap-3">
+        <a href={twitterUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 transition">
+          View on X
+        </a>
+        <a href={telegramUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-pink-600 to-indigo-600 shadow-lg">
+          Join Telegram
+        </a>
+      </div>
+
+      <div className="mt-8 grid grid-cols-3 gap-3 max-w-md">
+        <div className="bg-zinc-800/60 p-4 rounded-lg text-center">
+          <div className="text-xs text-zinc-400">Supply</div>
+          <div className="font-bold mt-1">1,000,000,000</div>
+        </div>
+        <div className="bg-zinc-800/60 p-4 rounded-lg text-center">
+          <div className="text-xs text-zinc-400">Liquidity Lock</div>
+          <div className="font-bold mt-1">Planned</div>
+        </div>
+        <div className="bg-zinc-800/60 p-4 rounded-lg text-center">
+          <div className="text-xs text-zinc-400">Tax</div>
+          <div className="font-bold mt-1">0–2% (dev ops)</div>
+        </div>
+      </div>
+    </motion.div>
+
+    <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.6 }} className="relative">
+      <div className="w-full bg-gradient-to-br from-pink-700/30 via-indigo-700/20 to-transparent rounded-2xl p-6 shadow-2xl backdrop-blur-sm border border-white/5">
+        <div className="h-64 md:h-80 flex flex-col items-start justify-center gap-4">
+          <div className="text-sm text-zinc-300">Latest Drop</div>
+          <div className="text-2xl font-bold">nobody is perfect — me: shows GAURIX</div>
+          <div className="text-xs text-zinc-400">Meme post • Viral</div>
+
+          <div className="mt-4 flex gap-3">
+            <a href={twitterUrl} target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition">Open Post</a>
+            <a href={telegramUrl} target="_blank" rel="noreferrer" className="px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition">Group Chat</a>
+          </div>
+        </div>
+      </div>
+
+      {/* subtle decorative card */}
+      <div className="absolute -right-8 -bottom-8 w-36 h-36 rounded-xl bg-gradient-to-tr from-indigo-600 to-pink-500 opacity-30 blur-2xl"></div>
+    </motion.div>
+  </header>
+
+  {/* Features */}
+  <section className="max-w-6xl mx-auto px-6 py-10">
+    <div className="grid md:grid-cols-3 gap-6">
+      <Feature title="No Paid AMAs" desc="We reject pay-to-play. Community > clout." />
+      <Feature title="Transparent Tokenomics" desc="Clear supply and planned liquidity decisions." />
+      <Feature title="Meme-First" desc="Clever satire, viral-ready content, and raw energy." />
+    </div>
+  </section>
+
+  {/* Tokenomics & Roadmap */}
+  <section className="max-w-6xl mx-auto px-6 py-10">
+    <div className="bg-zinc-800/50 p-6 rounded-2xl grid md:grid-cols-2 gap-6 items-start">
+      <div>
+        <h3 className="text-2xl font-bold">Tokenomics (Short)</h3>
+        <ul className="mt-4 space-y-2 text-zinc-300">
+          <li>• Total supply: 1,000,000,000 $GRX</li>
+          <li>• Initial liquidity: community-driven</li>
+          <li>• Liquidity lock: planned / announced on launch</li>
+          <li>• Dev & Ops: small tax for tools & growth</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-bold">Roadmap (Season 1)</h3>
+        <ol className="mt-4 space-y-2 text-zinc-300">
+          <li>• Phase 1 — Meme drops & community bootstrapping</li>
+          <li>• Phase 2 — Contract audit & liquidity lock</li>
+          <li>• Phase 3 — Exchange listings & partnerships</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section className="max-w-6xl mx-auto px-6 py-12 text-center">
+    <motion.div whileHover={{ scale: 1.02 }} className="inline-block">
+      <h2 className="text-3xl font-extrabold">Ready to vibe or roast?</h2>
+      <p className="mt-3 text-zinc-300">Follow the chaos. Join the chat. Share the memes.</p>
+
+      <div className="mt-6 flex items-center justify-center gap-4">
+        <a href={twitterUrl} target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 transition">Follow on X</a>
+        <a href={telegramUrl} target="_blank" rel="noreferrer" className="px-6 py-3 rounded-full bg-gradient-to-r from-pink-600 to-violet-600 shadow-lg">Join Telegram</a>
+      </div>
+    </motion.div>
+  </section>
+
+  {/* Footer */}
+  <footer className="border-t border-white/5 mt-12">
+    <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="text-zinc-400 text-sm">© {new Date().getFullYear()} GAURIX — built for chaos, not for scams.</div>
+      <div className="flex gap-3">
+        <a href={twitterUrl} target="_blank" rel="noreferrer" className="text-sm px-3 py-2 rounded-md bg-zinc-800/40">X</a>
+        <a href={telegramUrl} target="_blank" rel="noreferrer" className="text-sm px-3 py-2 rounded-md bg-zinc-800/40">Telegram</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+) }
+
+function Feature({ title, desc }) { return ( <div className="bg-zinc-800/40 p-6 rounded-2xl"> <h4 className="font-bold text-lg">{title}</h4> <p className="mt-2 text-zinc-300">{desc}</p> </div> ) }
+
